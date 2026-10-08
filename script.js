@@ -3,12 +3,13 @@
 
   var BRACCIO = { name: 'Braccio di Lorenzo', img: 'assets/img/braccio-lorenzo.jpg' };
 
+  // Ordine fisso delle domande. "art" e' l'articolo che precede il nome nella domanda.
   var AVVERSARI = [
-    { name: 'Mike Bongiorno', img: 'assets/img/mike-bongiorno.jpg' },
-    { name: 'Ridge di Beautiful', img: 'assets/img/ridge-di-beautiful.jpg' },
-    { name: 'Camion della spazzatura Peterbilt', img: 'assets/img/camion-spazzatura.jpg' },
-    { name: 'Panzer VI Tiger', img: 'assets/img/carro-armato.jpg' },
-    { name: 'UH-60 Black Hawk', img: 'assets/img/elicottero.jpg' }
+    { art: 'uno', name: 'Schwere Panzerabteilung 503', img: 'assets/img/carro-armato.jpg' },
+    { art: '', name: 'Mike Bongiorno', img: 'assets/img/mike-bongiorno.jpg' },
+    { art: 'uno', name: 'Sikorsky UH-60 Black Hawk', img: 'assets/img/elicottero.jpg' },
+    { art: 'il', name: 'Camion dei rifiuti elettrico di Portland', img: 'assets/img/camion-spazzatura.jpg' },
+    { art: '', name: 'Ridge di Beautiful', img: 'assets/img/ridge-di-beautiful.jpg' }
   ];
 
   var MSG_OK = 'Bravissimo/a, è molto più forte il braccio di Lorenzo!';
@@ -66,7 +67,7 @@
   }
 
   function startGame() {
-    order = shuffle(AVVERSARI);
+    order = AVVERSARI.slice();
     round = 0;
     score = 0;
     show('game');
@@ -83,7 +84,7 @@
     q.textContent = '';
     q.appendChild(document.createTextNode('È più forte il '));
     q.appendChild(bold(BRACCIO.name));
-    q.appendChild(document.createTextNode(' o '));
+    q.appendChild(document.createTextNode(' o ' + (opp.art ? opp.art + ' ' : '')));
     q.appendChild(bold(opp.name));
     q.appendChild(document.createTextNode('?'));
 
