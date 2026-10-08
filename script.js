@@ -6,9 +6,9 @@
   var AVVERSARI = [
     { name: 'Mike Bongiorno', img: 'assets/img/mike-bongiorno.jpg' },
     { name: 'Ridge di Beautiful', img: 'assets/img/ridge-di-beautiful.jpg' },
-    { name: 'Camion della spazzatura', img: 'assets/img/camion-spazzatura.jpg' },
-    { name: 'Carro armato', img: 'assets/img/carro-armato.jpg' },
-    { name: 'Elicottero militare', img: 'assets/img/elicottero.jpg' }
+    { name: 'Camion della spazzatura Peterbilt', img: 'assets/img/camion-spazzatura.jpg' },
+    { name: 'Panzer VI Tiger', img: 'assets/img/carro-armato.jpg' },
+    { name: 'UH-60 Black Hawk', img: 'assets/img/elicottero.jpg' }
   ];
 
   var MSG_OK = 'Bravissimo/a, è molto più forte il braccio di Lorenzo!';
