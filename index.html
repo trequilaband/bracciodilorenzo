@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Braccio di Lorenzo | Il gioco</title>
+<meta name="description" content="Il gioco più stupido del mondo: è più forte il Braccio di Lorenzo o...? Scoprilo in 5 domande.">
+<meta property="og:title" content="Il Braccio di Lorenzo | Il gioco">
+<meta property="og:description" content="È più forte il Braccio di Lorenzo o...? Scoprilo in 5 domande.">
+<meta property="og:image" content="assets/img/braccio-lorenzo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%AA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="app">
+
+  <header class="top">
+    <p class="kicker">Trequila Band presenta</p>
+    <h1 class="title">Il Braccio di Lorenzo</h1>
+  </header>
+
+  <section class="screen" id="screen-start">
+    <p class="lead">Un gioco serissimo. Ti faremo 5 domande, tutte difficilissime.</p>
+    <button type="button" class="btn btn-coral" id="btn-start">Inizia a giocare</button>
+  </section>
+
+  <section class="screen" id="screen-game" hidden>
+    <p class="progress" id="progress" aria-live="polite"></p>
+    <h2 class="question" id="question"></h2>
+    <div class="cards" id="cards"></div>
+    <p class="feedback" id="feedback" role="status" aria-live="assertive"></p>
+    <button type="button" class="btn btn-coral" id="btn-next" hidden>Avanti</button>
+  </section>
+
+  <section class="screen" id="screen-end" hidden>
+    <svg class="trophy" viewBox="0 0 100 100" aria-hidden="true">
+      <g stroke="#123f4a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+        <path id="trophy-handles" d="M30 18H17C17 35 23 43 32 45M70 18H83C83 35 77 43 68 45" fill="none"/>
+        <path id="trophy-cup" d="M30 10H70V38C70 54 61 62 50 62C39 62 30 54 30 38Z" fill="#e4a430"/>
+        <path id="trophy-base" d="M46 62H54V76H46ZM37 76H63V84H37ZM31 84H69V92H31Z" fill="#e4a430"/>
+      </g>
+      <path d="M50 20L53 28H62L55 33L58 41L50 36L42 41L45 33L38 28H47Z" fill="#fff7e0" opacity="0.9"/>
+    </svg>
+    <h2 class="end-title">Congratulazioni!</h2>
+    <p class="score" id="score"></p>
+    <p class="lead" id="end-text"></p>
+    <div class="end-actions">
+      <button type="button" class="btn btn-coral" id="btn-download">Scarica la tua foto</button>
+      <button type="button" class="btn btn-outline" id="btn-again">Rigioca</button>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <a href="https://trequilaband.github.io/music/" target="_blank" rel="noopener">Trequila Band</a>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
